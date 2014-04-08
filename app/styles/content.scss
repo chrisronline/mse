@@ -5,6 +5,7 @@
   clear: both;
   background: #333;
   padding: 2rem;
+  margin: 0 auto;
   @include non-content();
   @include bp(mobile) {
     padding: 1rem;

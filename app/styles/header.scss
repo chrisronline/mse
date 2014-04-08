@@ -3,8 +3,8 @@
 
 #header {
   font-family: 'Exo';
+  margin: 3rem auto 0 auto;
   @include non-content();
-  margin-top: 3rem;
   @include bp(mobile) {
     margin-top: 0;
   }
@@ -17,6 +17,10 @@
     letter-spacing: 0.5rem;
     float: left;
     @include bp(mobile) {
+      float: none;
+      text-align: center;
+    }
+    @include bp(small-screens) {
       float: none;
       text-align: center;
     }
@@ -36,6 +40,11 @@
     margin: 2rem 0 0.5rem 0;
     float: right;
     @include bp(mobile) {
+      float: none;
+      text-align: center;
+      margin: 0 0 1rem -2rem;
+    }
+    @include bp(small-screens) {
       float: none;
       text-align: center;
       margin: 0 0 1rem -2rem;

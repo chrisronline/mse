@@ -36,7 +36,10 @@
 
   @include bp(large-screens) {
     width: 80%;
-    margin: 0 auto;
+  }
+
+  @include bp(medium-screens) {
+    width: 80%;
   }
 }
 
