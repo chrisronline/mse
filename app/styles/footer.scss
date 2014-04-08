@@ -1,0 +1,23 @@
+@import "variables";
+@import "mixins";
+
+footer {
+  text-align: center;
+  font-family: 'Exo';
+  @include non-content();
+  margin: 1rem auto;
+
+  ul {
+    margin: 0.5rem 0;
+    li {
+      display: inline-block;
+      a {
+        @include footer-nav-link();
+      }
+    }
+  }
+
+  span {
+    letter-spacing: 0.25rem;
+  }
+}

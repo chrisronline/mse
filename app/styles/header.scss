@@ -1,0 +1,51 @@
+@import "variables";
+@import "mixins";
+
+#header {
+  font-family: 'Exo';
+  @include non-content();
+  margin-top: 3rem;
+  @include bp(mobile) {
+    margin-top: 0;
+  }
+
+  h1 {
+    font-size: 32px;
+    padding: 1rem;
+    padding-left: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    float: left;
+    @include bp(mobile) {
+      float: none;
+      text-align: center;
+    }
+
+    @include transition(color 0.3s);
+    &:hover {
+      color: $mseRed;
+    }
+
+    @include bp(mobile) {
+      font-size: 27px;
+      letter-spacing: 0;
+    }
+  }
+
+  nav {
+    margin: 2rem 0 0.5rem 0;
+    float: right;
+    @include bp(mobile) {
+      float: none;
+      text-align: center;
+      margin: 0 0 1rem -2rem;
+    }
+  }
+
+  li {
+    display: inline-block;
+    a {
+      @include header-nav-link();
+    }
+  }
+}

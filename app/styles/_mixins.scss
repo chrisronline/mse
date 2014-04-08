@@ -1,0 +1,60 @@
+@import "compass/css3/transition";
+
+@mixin nav-link() {
+  font-size: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  margin-left: 1rem;
+  letter-spacing: 0.25rem;
+  @include transition(border-color 0.3s);
+  &:hover, &.active {
+    border-color: $mseRed;
+  }
+  @include bp(mobile) {
+    letter-spacing: 0;
+    font-size: 14px;
+  }
+}
+
+@mixin header-nav-link() {
+  border-bottom: solid 2px transparent;
+  padding-bottom: 1rem;
+  @include nav-link();
+}
+
+@mixin footer-nav-link() {
+  border-top: solid 2px transparent;
+  padding-top: 1rem;
+  @include nav-link();
+}
+
+@mixin non-content() {
+  @include bp(mobile) {
+    padding: 0;
+  }
+
+  @include bp(large-screens) {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+/* http://thesassway.com/intermediate/responsive-web-design-in-sass-using-media-queries-in-sass-32 */
+$break-small-screens: 768px;
+$break-medium-screens: 992px;
+$break-large-screens: 1200px;
+@mixin bp($media) {
+  @if $media == extra-small-screens or $media == handhelds or $media == mobile {
+    @media only screen and (max-width: $break-small-screens ) { @content; }
+  }
+  @else if $media == small-screens {
+    @media only screen and (min-width: $break-small-screens + 1) and (max-width: $break-medium-screens) { @content; }
+  }
+  @else if $media == medium-screens {
+    @media only screen and (min-width: $break-medium-screens + 1) and (max-width: $break-large-screens) { @content; }
+  }
+  @else if $media == large-screens {
+    @media only screen and (min-width: $break-large-screens + 1) { @content; }
+  }
+}
