@@ -2,7 +2,7 @@
   'use strict';
 
   $(document).ready(function() {
-    $('a').on('click', function(evt) {
+    $('a:not([href*="mailto"])').on('click', function(evt) {
       evt.stopImmediatePropagation();
       evt.preventDefault();
 
