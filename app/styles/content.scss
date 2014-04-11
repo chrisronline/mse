@@ -38,7 +38,7 @@
       th {
         font-size: 18px;
         text-align: left;
-        text-decoration: underline;
+        text-decoration: none;
       }
 
       th, td {
@@ -81,18 +81,6 @@
       margin-right: 1rem;
       border: solid 1px $mseRed;
       padding: 1px;
-    }
-  }
-
-  #gigs {
-    table {
-      a {
-        color: $mseRed;
-        text-decoration: none;
-        &:hover {
-          text-decoration: underline;
-        }
-      }
     }
   }
 
@@ -148,6 +136,4 @@
 .top {
   font-size: 12px;
   color: $mseFontColor;
-  &:hover { color: $mseRed; }
-  text-decoration: none;
 }

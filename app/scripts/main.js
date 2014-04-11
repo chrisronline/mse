@@ -2,7 +2,8 @@
   'use strict';
 
   $(document).ready(function() {
-    $('a:not([href*="mailto"])').on('click', function(evt) {
+    var root = $('html, body');
+    $('a[href*=#]').on('click', function(evt) {
       evt.stopImmediatePropagation();
       evt.preventDefault();
 
@@ -13,7 +14,7 @@
         top = 0;
       }
 
-      $('html, body').animate({ scrollTop: top }, {
+      root.animate({ scrollTop: top }, {
         done: function() {
           window.location.hash = hash;
         }

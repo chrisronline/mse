@@ -12,6 +12,15 @@ html, body {
   letter-spacing: 2px;
 }
 
+a {
+  color: $mseFontRed;
+  text-decoration: none;
+  border-bottom: solid 1px transparent;
+  &:hover {
+    border-bottom-color: $mseFontRed;
+  }
+}
+
 .clearfix {
   clear: both;
 }

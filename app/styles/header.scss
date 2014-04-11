@@ -3,7 +3,7 @@
 
 #header {
   font-family: 'Exo';
-  margin: 3rem auto 0 auto;
+  margin: 1rem auto 0 auto;
   @include non-content();
   @include bp(mobile) {
     margin-top: 0;
@@ -37,7 +37,7 @@
   }
 
   nav {
-    margin: 2rem 0 0.5rem 0;
+    margin: 2rem 0 -0.9rem 0;
     // float: right;
     text-align: center;
     @include bp(mobile) {
