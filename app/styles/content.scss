@@ -103,8 +103,40 @@
   }
 
   #about {
+    article {
+      > header, > p {
+        vertical-align: top;
+        display: inline-block;
+
+        @include bp(mobile) {
+          display: block;
+        }
+      }
+
+      > header {
+        width: 29%;
+        @include bp(mobile) {
+          width: auto;
+        }
+      }
+
+      > p {
+        width: 70%;
+        margin: 0;
+        @include bp(mobile) {
+          width: auto;
+          margin: 1rem 0;
+        }
+      }
+    }
+
     h3 {
       margin-bottom: 1rem;
+      font-size: 20px;
+
+      > a:hover {
+        border-bottom-color: transparent;
+      }
 
       i {
         color: $mseFontColor;
@@ -112,6 +144,10 @@
           color: $mseRed;
         }
       }
+    }
+
+    em {
+      font-style: italic;
     }
 
     li {
