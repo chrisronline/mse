@@ -1,24 +1,37 @@
 (function() {
   'use strict';
 
+  var root = $('html, body'),
+    onLoadHash = null;
+
+  function anchorScroll(hash) {
+    var element = $(hash),
+      top = hash === '#top' ? 0 : element.offset().top;
+
+    root.animate({ scrollTop: top }, {
+      done: function() {
+        window.location.hash = hash;
+      }
+    });
+  }
+
   $(document).ready(function() {
-    var root = $('html, body');
     $('a[href*=#]').on('click', function(evt) {
       evt.stopImmediatePropagation();
       evt.preventDefault();
 
-      var hash = $(this).attr('href'),
-        element = $(hash),
-        top = element.offset().top;
-      if (hash === '#top') {
-        top = 0;
-      }
-
-      root.animate({ scrollTop: top }, {
-        done: function() {
-          window.location.hash = hash;
-        }
-      })
+      anchorScroll($(this).attr('href'));
     });
+
+    if (onLoadHash !== null) {
+      setTimeout(function() {
+        anchorScroll(onLoadHash);
+      }, 100);
+    }
   });
+
+  if (window.location.hash) {
+    onLoadHash = window.location.hash;
+    window.location.hash = '';
+  }
 })();
