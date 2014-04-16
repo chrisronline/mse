@@ -6,7 +6,7 @@
   margin: 1rem auto 0 auto;
   @include non-content();
   @include bp(mobile) {
-    margin-top: 0;
+    margin-bottom: -1rem;
   }
 
   h1 {
