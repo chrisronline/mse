@@ -1,5 +1,4 @@
 @import "reset";
-@import "fonts";
 @import "variables";
 @import "mixins";
 @import "header";
@@ -9,8 +8,8 @@
 html, body {
   background: #333 url('../images/bg_tile.png') repeat;
   color: $mseFontColor;
-  font: normal 16px 'Roboto', sans-serif;
-  letter-spacing: 2px;
+  font: normal 16px/23px 'Roboto', sans-serif;
+  letter-spacing: 1px;
 }
 
 a {

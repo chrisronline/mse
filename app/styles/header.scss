@@ -1,61 +1,107 @@
 @import "variables";
 @import "mixins";
+@import "compass/css3/text-shadow";
+@import "compass/css3/transform";
+@import "compass/css3/opacity";
+@import "compass/css3/transition";
 
 #header {
-  font-family: 'Exo';
-  margin: 1rem auto 0 auto;
-  @include non-content();
-  @include bp(mobile) {
-    margin-bottom: -1rem;
-  }
-
   h1 {
-    font-size: 32px;
-    padding: 1rem;
-    padding-left: 0;
-    text-transform: uppercase;
-    letter-spacing: 0.5rem;
-    float: left;
-    @include bp(mobile) {
-      float: none;
-      text-align: center;
-    }
-    @include bp(small-screens) {
-      float: none;
-      text-align: center;
-    }
-
-    @include transition(color 0.3s);
-    &:hover {
-      color: $mseRed;
-    }
+    @include shrink();
+    background-image: url('../images/red.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: solid 3px #222;
+    border-radius: 4px;
+    font-family: Arial;
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 4px;
+    line-height: normal;
+    padding: 2rem;
+    @include text-shadow(6px 1px 1px #000);
 
     @include bp(mobile) {
-      font-size: 27px;
-      letter-spacing: 0;
+      font-size: 38px;
+      padding: 2rem 0;
     }
   }
 
   nav {
-    margin: 2rem 0 -0.9rem 0;
-    // float: right;
-    text-align: center;
-    @include bp(mobile) {
-      float: none;
-      text-align: center;
-      margin: 0 0 1rem -2rem;
+    @include shrink();
+    background: #333;
+    margin: 1px auto 0 auto;
+    z-index: 2;
+
+    &.floating {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      border-bottom: solid 2px $mseRed;
+      margin: 0;
+      &.hidden {
+        @include opacity(0);
+        @include translate3d(0, -50px, 0);
+      }
+      &.visible {
+        @include transition(opacity 0.2s, transform 0.5s);
+        @include opacity(1);
+        @include translate3d(0, 0, 0);
+      }
+
+      li:first-child { display: inline-block; }
+      li:nth-child(2) { display: none; }
+
+      @include bp(mobile) {
+        display: none;
+      }
     }
-    @include bp(small-screens) {
-      float: none;
-      text-align: center;
-      margin: 0 0 1rem -2rem;
+
+    @include bp(mobile) {
+      border: solid 3px #222;
+      border-radius: 4px;
     }
   }
 
   li {
     display: inline-block;
-    a {
-      @include header-nav-link();
+    padding: 3px 0;
+
+    &:first-child {
+      display: none;
+      position: relative;
+      top: 4px;
+      a {
+        font-size: 28px;
+      }
     }
+
+    a {
+      display: inline-block;
+      padding: 0.5rem;
+      width: 10rem;
+      color: #fff;
+      font-family: 'Exo';
+      font-size: 18px;
+      text-decoration: none;
+      text-transform: uppercase;
+      border: none;
+      @include transition(color 0.3s);
+
+      @include bp(mobile) {
+        width: auto;
+        &.active { color: #fff; }
+      }
+
+      &:hover { color: $mseFontRed; }
+      &.active { color: $mseFontRed; }
+    }
+  }
+}
+
+.wf-ihki-n4-active {
+  #header h1, #header li:first-child a {
+    font-family: 'ihki';
   }
 }

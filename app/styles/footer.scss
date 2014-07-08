@@ -2,19 +2,14 @@
 @import "mixins";
 
 footer {
-  text-align: center;
   font-family: 'Exo';
-  @include non-content();
-  margin: 1rem auto;
+  @include shrink();
+  background: #333;
+  margin-bottom: 0rem;
+  padding: 1rem 0;
 
-  ul {
-    margin: 0.5rem 0;
-    li {
-      display: inline-block;
-      a {
-        @include footer-nav-link();
-      }
-    }
+  @include bp(mobile) {
+    padding-bottom: 3rem;
   }
 
   span {

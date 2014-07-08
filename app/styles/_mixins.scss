@@ -1,46 +1,17 @@
-@import "compass/css3/transition";
+@mixin content() {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
 
-@mixin nav-link() {
-  font-size: 18px;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #fff;
-  margin-left: 1rem;
-  letter-spacing: 0.25rem;
-  @include transition(border-color 0.3s);
-  &:hover, &.active {
-    border-color: $mseRed;
-  }
+@mixin shrink() {
+  width: 60%;
   @include bp(mobile) {
-    letter-spacing: 0;
-    font-size: 14px;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
   }
-}
-
-@mixin header-nav-link() {
-  border-bottom: solid 2px transparent;
-  padding-bottom: 1rem;
-  @include nav-link();
-}
-
-@mixin footer-nav-link() {
-  border-top: solid 2px transparent;
-  padding-top: 1rem;
-  @include nav-link();
-}
-
-@mixin non-content() {
-  @include bp(mobile) {
-    padding: 0;
-  }
-
-  @include bp(large-screens) {
-    width: 80%;
-  }
-
-  @include bp(medium-screens) {
-    width: 80%;
-  }
+  @include content();
 }
 
 /* http://thesassway.com/intermediate/responsive-web-design-in-sass-using-media-queries-in-sass-32 */
