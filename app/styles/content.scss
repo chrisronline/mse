@@ -128,3 +128,19 @@
     }
   }
 }
+
+#contact {
+  li {
+    display: inline-block;
+    margin-right: 1rem;
+    a {
+      color: #fff;
+      text-decoration: none;
+      border-bottom: solid 2px transparent;
+      padding-bottom: 0.5rem;
+      &:hover {
+        border-bottom-color: $mseRed;
+      }
+    }
+  }
+}
