@@ -38,7 +38,7 @@
       }
 
       headerNav.find('a').removeClass('active');
-      if (scrollTop + $(this).height() === $('body').outerHeight()) {
+      if (scrollTop + $(window)[0].innerHeight === $('body').outerHeight()) {
         headerNav.find('a[href="#contact"]').addClass('active');
       }
       else {
