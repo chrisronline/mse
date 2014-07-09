@@ -9,7 +9,9 @@ footer {
   padding: 1rem 0;
 
   @include bp(mobile) {
-    padding-bottom: 3rem;
+    padding: 1rem 2rem;
+    border: solid 3px #222;
+    border-radius: 4px;
   }
 
   span {

@@ -4,13 +4,18 @@
   text-align: center;
 }
 
-@mixin shrink() {
+@mixin adjusted_width() {
   width: 60%;
+  @include bp(medium-screens) {
+    width: 85%;
+  }
   @include bp(mobile) {
     width: 100%;
-    padding-left: 0;
-    padding-right: 0;
   }
+}
+
+@mixin shrink() {
+  @include adjusted_width();
   @include content();
 }
 

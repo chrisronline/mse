@@ -122,10 +122,7 @@
   li {
     margin-bottom: 3rem;
     @include content();
-    width: 60%;
-    @include bp(mobile) {
-      width: 90%;
-    }
+    @include adjusted_width();
   }
 }
 

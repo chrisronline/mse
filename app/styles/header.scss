@@ -24,7 +24,6 @@
 
     @include bp(mobile) {
       font-size: 38px;
-      padding: 2rem 0;
     }
   }
 
@@ -61,6 +60,7 @@
     @include bp(mobile) {
       border: solid 3px #222;
       border-radius: 4px;
+      padding: 0 2rem;
     }
   }
 
