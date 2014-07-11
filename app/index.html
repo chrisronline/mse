@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <title>The Main Street East Band</title>
   <meta name="description" content="">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="shortcut icon" href="/favicon.ico">
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
   <!-- build:css styles/vendor.css -->
@@ -27,11 +27,23 @@
   <header id="header">
     <h1><span>The Main Street East Band</span></h1>
     <nav>
-      <ul>
+      <ul class="primary">
         <li><a href="#top">MSE</a></li>
         <li><a href="#top">Home</a></li>
         <li><a href="#gigs">Gigs</a></li>
-        <li><a href="#about">About</a></li>
+        <li>
+          <a href="#about">About</a>
+          <ul class="secondary">
+            <li><a href="#dougpucci">Doug Pucci</a></li>
+            <li><a href="#bobschrieber">Bob Schrieber</a></li>
+            <li><a href="#michaelgeorge">Michael George</a></li>
+            <li><a href="#joemonachino">Joe Monachino</a></li>
+            <li><a href="#scottwarburton">Scott Warburton</a></li>
+            <li><a href="#joestramonine">Joe Stramonine</a></li>
+            <li><a href="#leestramonine">Lee Stamonine</a></li>
+            <li><a href="#bernieheveron">Bernie Heveron</a></li>
+          </ul>
+        </li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -40,6 +52,7 @@
   <div class="content">
     <section id="home">
       <header>
+        <h2>MSE</h2>
         <h2>Rock and Roll!</h2>
       </header>
       <p>
@@ -87,7 +100,7 @@
       </header>
       <ul>
         <li>
-          <article>
+          <article id="dougpucci">
             <header>
               <h3>Doug "The Pooch" Pucci</h3>
               <em>Rhythm Guitar, Acoustic Guitar, Vocals</em>
@@ -105,7 +118,7 @@
           </article>
         </li>
         <li>
-          <article id="bob">
+          <article id="bobschrieber">
             <header>
               <h3>Bob "Rodney" Schreiber</h3>
               <em>Lead Guitar, Vocals</em>
@@ -123,7 +136,7 @@
           </article>
         </li>
         <li>
-          <article id="michael">
+          <article id="michaelgeorge">
             <header>
               <h3>Michael "Doc" George, Jr</h3>
               <em>Bass Guitar, Tenor and Alto Saxophone, Vocals</em>
@@ -138,7 +151,7 @@
           </article>
         </li>
         <li>
-          <article id="joe">
+          <article id="joemonachino">
             <header>
               <h3>Joe "Monaconga" Monachino</h3>
               <em>Trap Drums, Congas, Toys</em>
@@ -157,7 +170,7 @@
           </article>
         </li>
         <li>
-          <article id="scott">
+          <article id="scottwarburton">
             <header>
               <h3>Scott "KB" Warburton</h3>
               <em>Keyboards, Trumpet, Vocals</em>
@@ -176,7 +189,7 @@
           </article>
         </li>
         <li>
-          <article id="joes">
+          <article id="joestramonine">
             <header>
               <h3>Joe Stramonine</h3>
               <em>Drums, Vocals</em>
@@ -200,7 +213,7 @@
           </article>
         </li>
         <li>
-          <article id="lee">
+          <article id="leestramonine">
             <header>
               <h3>Lee Stamonine</h3>
               <em>Vocals</em>
@@ -218,7 +231,7 @@
           </article>
         </li>
         <li>
-          <article id="bernie">
+          <article id="bernieheveron">
             <header>
               <h3>Bernie Heveron</h3>
               <em>Guitar, Bass Guitar</em>
@@ -259,6 +272,7 @@
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/modernizr/modernizr.js"></script>
   <script src="bower_components/rivets/dist/rivets.js"></script>
+  <script src="bower_components/lodash/dist/lodash.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
 

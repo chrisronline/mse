@@ -19,53 +19,84 @@
     text-align: center;
     letter-spacing: 4px;
     line-height: normal;
-    padding: 2rem;
+    padding: 2rem 0;
     @include text-shadow(6px 1px 1px #000);
 
     @include bp(mobile) {
       font-size: 38px;
+      border-left: none;
+      border-right: none;
     }
   }
 
   nav {
     @include shrink();
     background: #333;
-    margin: 1px auto 0 auto;
+    margin-top: 1px;
     z-index: 2;
+    @include bp(mobile) {
+      border: solid 3px #222;
+      border-radius: 4px;
+      padding: 0;
+    }
+  }
 
-    &.floating {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      border-bottom: solid 2px $mseRed;
-      margin: 0;
-      &.hidden {
-        @include opacity(0);
-        @include translate3d(0, -50px, 0);
-      }
-      &.visible {
-        @include transition(opacity 0.2s, transform 0.5s);
-        @include opacity(1);
-        @include translate3d(0, 0, 0);
-      }
+  nav.floating {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-bottom: solid 2px $mseRed;
+    margin: 0;
 
-      li:first-child { display: inline-block; }
-      li:nth-child(2) { display: none; }
+    ul.primary > li:first-child {
+      display: inline-block;
+    }
+    ul.primary > li:nth-child(2) {
+      display: none;
+    }
+
+    ul.secondary {
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 3.2rem;
+      height: 2.5rem;
 
       @include bp(mobile) {
-        padding: 0;
+        right: 4.5rem;
+        left: auto;
+        bottom: auto;
+        height: auto;
       }
     }
 
     @include bp(mobile) {
-      border: solid 3px #222;
-      border-radius: 4px;
-      padding: 0 2rem;
+      padding: 0;
     }
   }
 
+  nav.floating.hidden {
+    @include transition(opacity 0.2s, transform 0.2s);
+    @include opacity(0);
+    @include translate3d(0, -50px, 0);
+  }
+
+  nav.floating.visible {
+    @include transition(opacity 0.2s, transform 0.5s);
+    @include opacity(1);
+    @include translate3d(0, 0, 0);
+  }
+
   li {
+    white-space: nowrap;
     display: inline-block;
+  }
+
+  ul.primary {
+    position: relative;
+  }
+
+  ul.primary > li {
     padding: 3px 0;
 
     &:first-child {
@@ -76,37 +107,71 @@
         font-size: 28px;
       }
     }
+  }
 
-    a {
-      display: inline-block;
-      padding: 0.5rem;
-      width: 10rem;
-      color: #fff;
-      font-family: 'Exo';
-      font-size: 18px;
-      text-decoration: none;
-      text-transform: uppercase;
-      border: none;
-      @include transition(color 0.3s);
+  a {
+    display: inline-block;
+    padding: 0.5rem;
+    width: 10rem;
+    color: #fff;
+    font-family: 'Exo';
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: none;
+    @include transition(color 0.3s);
 
-      @include bp(mobile) {
-        width: auto;
-        &.active { color: #fff; }
-      }
-
-      &:hover {
-        color: $mseFontRed;
-        @include bp(mobile) {
-          color: #fff;
-        }
-      }
-      &.active { color: $mseFontRed; }
+    @include bp(mobile) {
+      width: auto;
+      font-size: 14px;
+      &.active { color: #fff; }
     }
+
+    @include bp(small-screens) {
+      width: 8rem;
+    }
+
+    &:hover {
+      color: $mseFontRed;
+      @include bp(mobile) {
+        color: #fff;
+      }
+    }
+    &.active { color: $mseFontRed; }
+  }
+
+  ul.secondary {
+    position: absolute;
+    background: #222;
+    top: 2.8rem;
+    left: 4rem;
+    @include transition(opacity 0.2s, transform 0.2s);
+    @include opacity(0);
+    @include translate3d(0, -10px, 0);
+    a {
+      width: auto;
+      font-size: 12px;
+    }
+    @include bp(small-screens) {
+      left: -3rem;
+      a { font-size: 10px; }
+    }
+
+    @include bp(mobile) {
+      display: none;
+    }
+  }
+
+  ul.primary > li:hover ul.secondary,
+  ul.primary > li a.active + ul.secondary {
+    @include transition(opacity 0.2s, transform 0.5s);
+    @include opacity(1);
+    @include translate3d(0, 0, 0);
   }
 }
 
 .wf-ihki-n4-active {
-  #header h1, #header li:first-child a {
+  #header h1, #header ul.primary > li:first-child a {
     font-family: 'ihki';
   }
 }
