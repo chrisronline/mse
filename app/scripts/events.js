@@ -42,6 +42,13 @@
       //   venue: 'Webster, NY'
       // },
       {
+        date: '08/23/2014',
+        time: '7pm - 9pm',
+        title: 'Ontario Summer Sendoff',
+        link: 'https://goo.gl/maps/moeGm',
+        venue: 'Casey Park'
+      },
+      {
         date: '09/06/2014',
         time: 'All Day',
         title: 'Private Party'
