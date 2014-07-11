@@ -34,13 +34,13 @@
         time: 'All Day',
         title: 'Private Party'
       },
-      {
-        date: '08/16/2014',
-        time: '4:30pm',
-        title: 'Webster Village Days',
-        link: 'https://goo.gl/maps/7RYQA',
-        venue: 'Webster, NY'
-      },
+      // {
+      //   date: '08/16/2014',
+      //   time: '4:30pm',
+      //   title: 'Webster Village Days',
+      //   link: 'https://goo.gl/maps/7RYQA',
+      //   venue: 'Webster, NY'
+      // },
       {
         date: '09/06/2014',
         time: 'All Day',
