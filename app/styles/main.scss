@@ -4,6 +4,7 @@
 @import "header";
 @import "content";
 @import "footer";
+@import "compass/css3/box-sizing";
 
 html, body {
   background: #333 url('../images/bg_tile.png') repeat;
@@ -23,4 +24,8 @@ a {
 
 .clearfix {
   clear: both;
+}
+
+header, footer, .content {
+  @include box-sizing('border-box');
 }
