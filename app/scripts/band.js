@@ -13,7 +13,8 @@
         'After high school, Doug played the coffeehouse circuit, country and folk rock, and even a little disco!  In the mid 80\'s, Doug became ' +
           'the DJ host at a local night club.  In the 90\'s Doug and a few of his musician friends got together to form a band and are still playing ' +
           'today as "Main Street East!"',
-        'Doug met his wife, Patty, in high school and today they live in Webster. They have four wonderful children and six (with two on the way) beautiful grandchildren.'
+        'Doug met his wife, Patty, in high school and today they live in Webster. They have four wonderful children and six (with two on the way) ' +
+          'beautiful grandchildren.'
       ]
     },
     {
@@ -106,7 +107,7 @@
           'were signed to the AMI label. They had two single releases nationally and overseas which did well on the independent label charts. They appeared twice ' +
           'on National television and performed at the world renowned "Fan Fair" in Nashville. Lee also sings with a local trio of ladies performing some classic ' +
           'secular music and gospel.',
-        'Lee and her husband Joe are very blessed to have 2 children and 5 grandchildren. Their son Cory has carried on the family tradition of music being the ' +
+        'Lee and her husband Joe are very blessed to have 2 children and 6 grandchildren. Their son Cory has carried on the family tradition of music being the ' +
           'lead singer for the local group "Guy Smiley". Lee is thrilled to be a part of the Main Street East band.'
       ]
     },
