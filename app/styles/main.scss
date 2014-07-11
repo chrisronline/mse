@@ -25,7 +25,3 @@ a {
 .clearfix {
   clear: both;
 }
-
-header, footer, .content {
-  @include box-sizing('border-box');
-}
