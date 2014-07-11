@@ -19,13 +19,15 @@
     text-align: center;
     letter-spacing: 4px;
     line-height: normal;
-    padding: 2rem 0;
+    padding: 2rem 1rem;
     @include text-shadow(6px 1px 1px #000);
 
     @include bp(mobile) {
       font-size: 38px;
       border-left: none;
       border-right: none;
+      padding-right: 0;
+      padding-left: 0;
     }
   }
 

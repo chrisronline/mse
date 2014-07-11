@@ -29,9 +29,6 @@
       @include bp(mobile) {
         font-size: 34px;
       }
-      + h2 {
-        margin-top: 2rem;
-      }
     }
 
     > header {
@@ -58,6 +55,20 @@
 .top {
   font-size: 12px;
   color: $mseFontColor;
+}
+
+#home h2:first-child {
+  font-size: 7rem;
+  @include bp(mobile) {
+    font-size: 5rem;
+    margin-top: 4rem;
+  }
+}
+#home h2:nth-child(2) {
+  margin-top: 4rem;
+  @include bp(mobile) {
+    margin-top: 4rem;
+  }
 }
 
 #gigs {
