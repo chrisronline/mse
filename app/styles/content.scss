@@ -10,30 +10,35 @@
   border-radius: 4px;
 
   @include bp(mobile) {
-    padding-top: 0;
+    padding: 0;
   }
 
   section {
+    margin: 4rem 0 2rem 0;
+    @include bp(mobile) {
+      margin: 2rem 0 1rem 0;
+    }
     h2 {
       font-family: 'ihki';
       font-size: 48px;
       text-transform: uppercase;
       letter-spacing: 0.25rem;
       padding-bottom: 0.5rem;
-      display: inline-block;
       @include text-shadow(6px 1px 1px $mseRed);
-      margin: 4rem 0 2rem 0;
+
       @include bp(mobile) {
-        margin: 2rem 0 1rem 0;
         font-size: 34px;
+      }
+      + h2 {
+        margin-top: 2rem;
       }
     }
 
     > header {
-      margin-bottom: 1rem;
+      margin-bottom: 3rem;
       text-align: center;
       @include bp(mobile) {
-        margin-bottom: 0;
+        margin-bottom: 1rem;
       }
     }
     &.last-child > header { border-bottom: none; }
@@ -119,8 +124,8 @@
     font-size: 12px;
   }
 
-  li {
-    margin-bottom: 3rem;
+  article {
+    margin-top: 3rem;
     @include content();
     @include adjusted_width();
   }
