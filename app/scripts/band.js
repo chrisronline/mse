@@ -96,8 +96,8 @@
       ]
     },
     {
-      name: 'Lee Stamonine',
-      fullName: 'Lee Stamonine',
+      name: 'Lee Stramonine',
+      fullName: 'Lee Stramonine',
       instruments: 'Vocals',
       bio: [
         'Lee Stramonine started singing solo performances as a child in the elementary school and church. In high school she joined a rock band where she met her ' +
