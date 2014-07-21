@@ -1,6 +1,7 @@
 @import "variables";
 @import "mixins";
 @import "compass/css3/text-shadow";
+@import "compass/css3/opacity";
 
 .content {
   background: #333;
@@ -57,17 +58,32 @@
   color: $mseFontColor;
 }
 
-#home h2:first-child {
+#home > header h2:first-child {
   font-size: 7rem;
   @include bp(mobile) {
     font-size: 5rem;
     margin-top: 4rem;
   }
 }
-#home h2:nth-child(2) {
+#home > header h2:nth-child(2) {
   margin-top: 4rem;
   @include bp(mobile) {
     margin-top: 4rem;
+  }
+}
+
+#nextGig {
+  background: #444;
+  padding: 2rem;
+  header {
+    margin-bottom: 2rem;
+  }
+  h2 {
+    font-size: 4rem;
+  }
+  h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -92,6 +108,10 @@
 
     &:nth-child(odd) {  background-color: #222; }
     &:nth-child(even) {  background-color: #444; }
+  }
+
+  li.in-past {
+    @include opacity(0.5);
   }
 
   .when, .where, .what {

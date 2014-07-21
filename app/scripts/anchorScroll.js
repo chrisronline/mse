@@ -20,9 +20,17 @@
       evt.stopImmediatePropagation();
       evt.preventDefault();
 
-      anchorScroll($(this).attr('href'));
+      var scrollTo = $(this).data('scroll-to');
+      if (scrollTo) {
+        scrollTo = '#' + scrollTo;
+        if ($(scrollTo).length === 0) {
+          scrollTo = null;
+        }
+      }
+
+      anchorScroll(scrollTo || $(this).attr('href'));
     });
-    
+
     if (onLoadHash) {
       setTimeout(function() {
         anchorScroll(onLoadHash);

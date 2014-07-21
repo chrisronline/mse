@@ -30,7 +30,7 @@
       <ul class="primary">
         <li><a href="#top">MSE</a></li>
         <li><a href="#top">Home</a></li>
-        <li><a href="#gigs">Gigs</a></li>
+        <li><a href="#gigs" data-scroll-to="is-next">Gigs</a></li>
         <li>
           <a href="#about">About</a>
           <ul class="secondary">
@@ -48,6 +48,24 @@
         <h2>MSE</h2>
         <h2>Rock and Roll!</h2>
       </header>
+      <section id="nextGig" rv-if="event">
+        <header>
+          <h2>Next Gig</h2>
+        </header>
+        <h3 rv-text="event.date"></h3>
+        <span class="when">
+          <i class="fa fa-clock-o"></i>
+          <span rv-text="event.time"></span>
+        </span>
+        <span class="what">
+          <i class="fa fa-tag"></i>
+          <span rv-text="event.title"></span>
+        </span>
+        <span class="where" rv-if="event.venue">
+          <i class="fa fa-map-marker"></i>
+          <a rv-href="event.link" rv-text="event.venue" target="_blank"></a>
+        </span>
+      </section>
       <p>
         The Main Street East Band, Rochester New York's premier interactive band, will move your feet, make you laugh and
         leave you begging for more! This 8-piece classic/platinum rock band works the crowd, playing favorites
@@ -70,7 +88,7 @@
         <h2>Gigs</h2>
       </header>
       <ul>
-        <li rv-each-event="events">
+        <li rv-each-event="events" rv-class-in-past="event.inPast" rv-id-is-next="event.isNext">
           <h3 rv-text="event.date"></h3>
           <span class="when">
             <i class="fa fa-clock-o"></i>
@@ -120,9 +138,9 @@
   <!-- build:js scripts/vendor.js -->
   <!-- bower:js -->
   <script src="bower_components/jquery/dist/jquery.js"></script>
-  <script src="bower_components/modernizr/modernizr.js"></script>
   <script src="bower_components/rivets/dist/rivets.js"></script>
-  <script src="bower_components/lodash/dist/lodash.js"></script>
+  <script src="bower_components/lodash/dist/lodash.compat.js"></script>
+  <script src="bower_components/moment/moment.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
 
