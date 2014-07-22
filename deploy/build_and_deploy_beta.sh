@@ -1,4 +1,4 @@
 cd app/
 grunt build
 cd ../
-bash deploy_beta.sh
+bash deploy/deploy_beta.sh
