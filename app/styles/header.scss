@@ -14,13 +14,18 @@
     border: solid 3px #222;
     border-radius: 4px;
     font-family: Arial;
-    font-size: 60px;
+    font-size: 4rem;
     font-weight: bold;
     text-align: center;
     letter-spacing: 4px;
     line-height: normal;
     padding: 2rem 1rem;
+    text-transform: uppercase;
     @include text-shadow(6px 1px 1px #000);
+
+    > span {
+      text-transform: none;
+    }
 
     @include bp(mobile) {
       font-size: 38px;
